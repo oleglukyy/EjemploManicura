@@ -1,0 +1,2916 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nails Studio | Manicura Profesional en [Ciudad]</title>
+    <meta
+      name="description"
+      content="Especialistas en manicura semipermanente, uñas de gel, acrílicas y nail art en [Ciudad]. Reserva tu cita fácilmente por teléfono o WhatsApp."
+    />
+    <meta
+      name="keywords"
+      content="manicura en [ciudad], uñas semipermanentes [ciudad], nail art [ciudad], manicura profesional, uñas de gel, uñas acrílicas"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Nails Studio — Manicura Profesional en [Ciudad]"
+    />
+    <meta
+      property="og:description"
+      content="Uñas elegantes, duraderas y cuidadas al detalle. Reserva tu cita hoy."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ─── VARIABLES ─── */
+      :root {
+        --nude: #f0e8df;
+        --nude-dark: #e0d2c5;
+        --rose: #d4a5a5;
+        --rose-light: #f5e6e6;
+        --rose-deep: #b07070;
+        --gold: #c9a96e;
+        --gold-light: #e8d4a8;
+        --white: #fdfaf8;
+        --dark: #2c2420;
+        --dark-mid: #5a4a44;
+        --text: #3d3028;
+        --text-light: #7a6a62;
+        --font-display: "Cormorant Garamond", Georgia, serif;
+        --font-body: "Jost", sans-serif;
+        --shadow-soft: 0 4px 30px rgba(44, 36, 32, 0.08);
+        --shadow-card: 0 8px 40px rgba(44, 36, 32, 0.12);
+        --radius: 4px;
+        --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* ─── RESET & BASE ─── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: var(--font-body);
+        color: var(--text);
+        background: var(--white);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ─── SCROLLBAR ─── */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--nude);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 3px;
+      }
+
+      /* ─── UTILITIES ─── */
+      .container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .section-label {
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 12px;
+      }
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 300;
+        line-height: 1.15;
+        color: var(--dark);
+        margin-bottom: 20px;
+      }
+      .section-title em {
+        font-style: italic;
+        color: var(--rose-deep);
+      }
+      .section-text {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        line-height: 1.8;
+        max-width: 560px;
+      }
+      .divider {
+        width: 48px;
+        height: 1px;
+        background: linear-gradient(90deg, var(--gold), transparent);
+        margin: 20px 0;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        border-radius: var(--radius);
+        font-family: var(--font-body);
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      .btn-primary {
+        background: var(--dark);
+        color: var(--white);
+      }
+      .btn-primary:hover {
+        background: var(--dark-mid);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(44, 36, 32, 0.2);
+      }
+      .btn-gold {
+        background: linear-gradient(135deg, var(--gold), var(--rose-deep));
+        color: var(--white);
+      }
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--dark);
+        border: 1px solid var(--nude-dark);
+      }
+      .btn-outline:hover {
+        background: var(--nude);
+        border-color: var(--gold);
+      }
+      .btn-whatsapp {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: #fff;
+      }
+      .btn-whatsapp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      }
+      .btn-phone {
+        background: var(--rose-deep);
+        color: #fff;
+      }
+      .btn-phone:hover {
+        background: var(--dark-mid);
+        transform: translateY(-2px);
+      }
+
+      /* ─── FLOATING WHATSAPP ─── */
+      .float-wa {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9999;
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        transition: var(--transition);
+        animation: pulse-wa 2.5s infinite;
+      }
+      .float-wa:hover {
+        transform: scale(1.12);
+      }
+      @keyframes pulse-wa {
+        0%,
+        100% {
+          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          box-shadow: 0 4px 32px rgba(37, 211, 102, 0.65);
+        }
+      }
+      .float-wa svg {
+        width: 28px;
+        height: 28px;
+        fill: #fff;
+      }
+
+      /* ─── HEADER ─── */
+      #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(253, 250, 248, 0.96);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+        transition: box-shadow 0.3s;
+      }
+      #header.scrolled {
+        box-shadow: var(--shadow-soft);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+      }
+      .logo {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 300;
+        letter-spacing: 0.06em;
+        color: var(--dark);
+      }
+      .logo span {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .nav-desktop {
+        display: none;
+        align-items: center;
+        gap: 32px;
+      }
+      .nav-desktop a {
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-light);
+        transition: color 0.2s;
+        position: relative;
+      }
+      .nav-desktop a::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 100%;
+        height: 1px;
+        background: var(--gold);
+        transition: right 0.3s;
+      }
+      .nav-desktop a:hover {
+        color: var(--dark);
+      }
+      .nav-desktop a:hover::after {
+        right: 0;
+      }
+      .nav-social {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .nav-social a {
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+      .nav-social a:hover {
+        opacity: 1;
+      }
+      .nav-social svg {
+        width: 18px;
+        height: 18px;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        padding: 6px;
+        background: none;
+        border: none;
+      }
+      .hamburger span {
+        display: block;
+        height: 1.5px;
+        background: var(--dark);
+        transition: var(--transition);
+        transform-origin: center;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+
+      /* ─── MOBILE NAV ─── */
+      .mobile-nav {
+        position: fixed;
+        inset: 70px 0 0 0;
+        z-index: 999;
+        background: var(--white);
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        padding: 40px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .mobile-nav.open {
+        transform: translateX(0);
+      }
+      .mobile-nav a {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: var(--dark);
+        padding: 14px 0;
+        border-bottom: 1px solid var(--nude);
+        transition:
+          color 0.2s,
+          padding-left 0.2s;
+      }
+      .mobile-nav a:hover {
+        color: var(--gold);
+        padding-left: 8px;
+      }
+      .mobile-nav .nav-social-mobile {
+        display: flex;
+        gap: 20px;
+        margin-top: 36px;
+        padding-top: 28px;
+        border-top: 1px solid var(--nude-dark);
+      }
+      .mobile-nav .nav-social-mobile a {
+        border: none;
+        padding: 0;
+        font-size: 0;
+        width: 44px;
+        height: 44px;
+        background: var(--nude);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .mobile-nav .nav-social-mobile svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* ─── HERO ─── */
+      #hero {
+        min-height: 100svh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding-top: 70px;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          #f9f2ed 0%,
+          #f0e4dd 40%,
+          #e8d8d0 100%
+        );
+      }
+      .hero-pattern {
+        position: absolute;
+        inset: 0;
+        opacity: 0.04;
+        background-image: repeating-linear-gradient(
+          45deg,
+          var(--gold) 0px,
+          var(--gold) 1px,
+          transparent 1px,
+          transparent 20px
+        );
+      }
+      .hero-deco {
+        position: absolute;
+        right: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 55vw;
+        max-width: 700px;
+        aspect-ratio: 3/4;
+        border-radius: 50% 30% 50% 30% / 40% 50% 40% 50%;
+        background: linear-gradient(
+          135deg,
+          var(--rose-light),
+          var(--nude-dark)
+        );
+        opacity: 0.5;
+      }
+      .hero-img-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        overflow: hidden;
+        display: none;
+      }
+      .hero-img-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          160deg,
+          #e8d4c8 0%,
+          #d4b8a8 50%,
+          #c4a090 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-img-placeholder svg {
+        width: 120px;
+        height: 120px;
+        opacity: 0.2;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 620px;
+      }
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 28px;
+      }
+      .hero-tag::before {
+        content: "";
+        width: 32px;
+        height: 1px;
+        background: var(--gold);
+        display: block;
+      }
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.6rem, 7vw, 5rem);
+        font-weight: 300;
+        line-height: 1.08;
+        color: var(--dark);
+        margin-bottom: 22px;
+      }
+      h1 em {
+        font-style: italic;
+        color: var(--rose-deep);
+      }
+      .hero-sub {
+        font-size: 1rem;
+        color: var(--text-light);
+        line-height: 1.75;
+        margin-bottom: 40px;
+        max-width: 440px;
+      }
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 48px;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+      .hero-stat strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 2rem;
+        font-weight: 300;
+        color: var(--dark);
+        line-height: 1;
+      }
+      .hero-stat span {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-light);
+      }
+      .hero-scroll {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--text-light);
+        animation: bounce-scroll 2s infinite;
+      }
+      @keyframes bounce-scroll {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(6px);
+        }
+      }
+      .hero-scroll-line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, var(--gold), transparent);
+      }
+
+      /* ─── SOBRE EL ESTUDIO ─── */
+      #sobre {
+        padding: 100px 0;
+        background: var(--white);
+      }
+      .sobre-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .sobre-img-wrap {
+        position: relative;
+      }
+      .sobre-img-main {
+        width: 100%;
+        aspect-ratio: 4/5;
+        background: linear-gradient(160deg, #ead8cc 0%, #d4b9a8 100%);
+        border-radius: 2px 60px 2px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .sobre-img-main svg {
+        width: 100px;
+        opacity: 0.2;
+      }
+      .sobre-badge {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        width: 130px;
+        height: 130px;
+        background: var(--gold);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 8px 32px rgba(201, 169, 110, 0.35);
+      }
+      .sobre-badge strong {
+        font-family: var(--font-display);
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 1;
+      }
+      .sobre-badge span {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-top: 4px;
+        text-align: center;
+      }
+      .sobre-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 32px;
+      }
+      .sobre-feat {
+        background: var(--nude);
+        padding: 18px 16px;
+        border-radius: 2px;
+        border-left: 2px solid var(--gold);
+      }
+      .sobre-feat h4 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--dark);
+        margin-bottom: 4px;
+      }
+      .sobre-feat p {
+        font-size: 0.78rem;
+        color: var(--text-light);
+        line-height: 1.5;
+      }
+
+      /* ─── SERVICIOS ─── */
+      #servicios {
+        padding: 100px 0;
+        background: var(--nude);
+        position: relative;
+        overflow: hidden;
+      }
+      #servicios::before {
+        content: "NAILS";
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-family: var(--font-display);
+        font-size: 18vw;
+        font-weight: 300;
+        color: rgba(201, 169, 110, 0.06);
+        pointer-events: none;
+        line-height: 1;
+      }
+      .servicios-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .servicios-header .section-text {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .service-card {
+        background: var(--white);
+        border-radius: 2px;
+        overflow: hidden;
+        transition: var(--transition);
+        cursor: pointer;
+        position: relative;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-card);
+      }
+      .service-card-img {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      .service-card-img-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .service-card:hover .service-card-img-inner {
+        transform: scale(1.05);
+      }
+      .service-card-img-inner svg {
+        width: 60px;
+        opacity: 0.25;
+      }
+      .sc-clasica {
+        background: linear-gradient(135deg, #f5e6e0, #e8d0c8);
+      }
+      .sc-semi {
+        background: linear-gradient(135deg, #ffe0e8, #f0c8d4);
+      }
+      .sc-acrilicas {
+        background: linear-gradient(135deg, #e8e0f5, #d0c8e8);
+      }
+      .sc-gel {
+        background: linear-gradient(135deg, #e0f0e8, #c8e0d4);
+      }
+      .sc-nailart {
+        background: linear-gradient(135deg, #f5f0e0, #e8dcc8);
+      }
+      .sc-reparacion {
+        background: linear-gradient(135deg, #f0e8e0, #e0d0c8);
+      }
+      .service-card-badge {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: var(--gold);
+        color: white;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 2px;
+      }
+      .service-card-body {
+        padding: 24px;
+      }
+      .service-card-body h3 {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+      .service-card-body p {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        line-height: 1.65;
+        margin-bottom: 16px;
+      }
+      .service-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .price-tag {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: var(--gold);
+      }
+      .price-tag span {
+        font-size: 0.75rem;
+        font-family: var(--font-body);
+        color: var(--text-light);
+        font-weight: 300;
+      }
+      .service-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--rose-deep);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s;
+      }
+      .service-card:hover .service-link {
+        gap: 10px;
+      }
+
+      /* ─── GALERÍA ─── */
+      #galeria {
+        padding: 100px 0;
+        background: var(--white);
+      }
+      .galeria-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 48px;
+      }
+      .galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 12px;
+      }
+      .gal-item {
+        overflow: hidden;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        background: var(--nude);
+      }
+      .gal-item:first-child {
+        grid-column: span 2;
+        aspect-ratio: 16/9;
+      }
+      .gal-item:not(:first-child) {
+        aspect-ratio: 1;
+      }
+      .gal-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.5s ease;
+      }
+      .gal-item:hover .gal-inner {
+        transform: scale(1.06);
+      }
+      .gal-inner svg {
+        width: 50px;
+        opacity: 0.2;
+      }
+      .g1 {
+        background: linear-gradient(135deg, #f0e0d8, #d8c0b0);
+      }
+      .g2 {
+        background: linear-gradient(135deg, #edd8d8, #d4b0b0);
+      }
+      .g3 {
+        background: linear-gradient(135deg, #e8e0d8, #d0c0b0);
+      }
+      .g4 {
+        background: linear-gradient(135deg, #f0d8e8, #d8b0c8);
+      }
+      .g5 {
+        background: linear-gradient(135deg, #e0e8d8, #c0d0b0);
+      }
+      .g6 {
+        background: linear-gradient(135deg, #d8e0f0, #b0b8d8);
+      }
+      .g7 {
+        background: linear-gradient(135deg, #f0ead8, #d8caa0);
+      }
+      .gal-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(44, 36, 32, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+      .gal-item:hover .gal-overlay {
+        background: rgba(44, 36, 32, 0.3);
+      }
+      .gal-overlay svg {
+        width: 32px;
+        fill: white;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: var(--transition);
+      }
+      .gal-item:hover .gal-overlay svg {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Lightbox */
+      #lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(44, 36, 32, 0.95);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: zoom-out;
+      }
+      #lightbox.active {
+        display: flex;
+      }
+      #lightbox img {
+        max-width: 90vw;
+        max-height: 85vh;
+        object-fit: contain;
+      }
+      .lb-close {
+        position: absolute;
+        top: 24px;
+        right: 32px;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        line-height: 1;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+      }
+      .lb-close:hover {
+        opacity: 1;
+      }
+      .lb-color-preview {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ─── RESEÑAS ─── */
+      #resenas {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--nude) 0%, #f5e8e0 100%);
+        overflow: hidden;
+      }
+      .resenas-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .resenas-header .section-text {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .stars-avg {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .stars-avg .stars {
+        color: var(--gold);
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+      }
+      .stars-avg .num {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+      .carousel-track-wrap {
+        overflow: hidden;
+      }
+      .carousel-track {
+        display: flex;
+        gap: 24px;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .review-card {
+        flex: 0 0 calc(100% - 0px);
+        background: var(--white);
+        border-radius: 2px;
+        padding: 32px;
+        box-shadow: var(--shadow-soft);
+        position: relative;
+      }
+      .review-card::before {
+        content: "\201C";
+        font-family: var(--font-display);
+        font-size: 6rem;
+        color: var(--gold-light);
+        position: absolute;
+        top: 8px;
+        left: 24px;
+        line-height: 1;
+        pointer-events: none;
+      }
+      .review-stars {
+        color: var(--gold);
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+      }
+      .review-text {
+        font-size: 0.95rem;
+        color: var(--text);
+        line-height: 1.75;
+        font-style: italic;
+        margin-bottom: 24px;
+        position: relative;
+        z-index: 1;
+      }
+      .review-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .review-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--rose-light),
+          var(--nude-dark)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        color: var(--rose-deep);
+        font-weight: 300;
+        flex-shrink: 0;
+      }
+      .review-name {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      .review-meta {
+        font-size: 0.75rem;
+        color: var(--text-light);
+      }
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 32px;
+      }
+      .carousel-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--nude-dark);
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+      }
+      .carousel-dot.active {
+        background: var(--gold);
+        width: 24px;
+        border-radius: 3px;
+      }
+
+      /* ─── RESERVA CTA ─── */
+      #reserva {
+        padding: 100px 0;
+        background: var(--dark);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      #reserva::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 80% 60% at 50% 50%,
+          rgba(201, 169, 110, 0.12),
+          transparent
+        );
+      }
+      #reserva .section-label {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 16px;
+      }
+      #reserva .section-title {
+        color: var(--white);
+        margin: 0 auto 16px;
+        max-width: 600px;
+      }
+      #reserva .section-title em {
+        color: var(--gold);
+      }
+      #reserva .section-text {
+        color: rgba(255, 255, 255, 0.55);
+        margin: 0 auto 40px;
+        text-align: center;
+      }
+      .reserva-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+      }
+      .reserva-btns .btn {
+        padding: 16px 32px;
+        font-size: 0.85rem;
+      }
+      .reserva-note {
+        margin-top: 24px;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+        letter-spacing: 0.06em;
+      }
+
+      /* ─── UBICACIÓN ─── */
+      #ubicacion {
+        padding: 100px 0;
+        background: var(--white);
+      }
+      .ubicacion-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .ubicacion-info h2 {
+        margin-bottom: 32px;
+      }
+      .info-item {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+        align-items: flex-start;
+      }
+      .info-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--nude);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 1px solid var(--nude-dark);
+      }
+      .info-icon svg {
+        width: 18px;
+        height: 18px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .info-item h4 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 4px;
+      }
+      .info-item p,
+      .info-item ul {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        line-height: 1.7;
+        list-style: none;
+      }
+      .map-container {
+        width: 100%;
+        height: 400px;
+        border-radius: 2px;
+        overflow: hidden;
+        background: var(--nude);
+        position: relative;
+      }
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .map-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #e8ddd5 0%, #d4c5ba 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      .map-placeholder svg {
+        width: 48px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .map-placeholder p {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        text-align: center;
+        max-width: 240px;
+      }
+      .map-placeholder a {
+        color: var(--gold);
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      /* ─── REDES SOCIALES ─── */
+      #redes {
+        padding: 80px 0;
+        background: var(--nude);
+        text-align: center;
+      }
+      .redes-icons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .red-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        box-shadow: var(--shadow-soft);
+      }
+      .red-icon svg {
+        width: 24px;
+        height: 24px;
+      }
+      .red-instagram {
+        background: linear-gradient(
+          135deg,
+          #f09433,
+          #e6683c,
+          #dc2743,
+          #cc2366,
+          #bc1888
+        );
+      }
+      .red-instagram svg {
+        fill: white;
+      }
+      .red-facebook {
+        background: #1877f2;
+      }
+      .red-facebook svg {
+        fill: white;
+      }
+      .red-wa {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+      }
+      .red-wa svg {
+        fill: white;
+      }
+      .red-icon:hover {
+        transform: translateY(-4px) scale(1.08);
+        box-shadow: var(--shadow-card);
+      }
+      .redes-feed-note {
+        font-size: 0.82rem;
+        color: var(--text-light);
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      /* ─── FOOTER ─── */
+      footer {
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.65);
+        padding: 70px 0 0;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .footer-brand .logo {
+        color: white;
+        margin-bottom: 16px;
+      }
+      .footer-brand p {
+        font-size: 0.82rem;
+        line-height: 1.7;
+        max-width: 280px;
+      }
+      .footer-social {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .footer-social a:hover {
+        background: var(--gold);
+      }
+      .footer-social svg {
+        width: 16px;
+        height: 16px;
+      }
+      .footer-col h4 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 20px;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col ul li {
+        margin-bottom: 10px;
+      }
+      .footer-col ul a {
+        font-size: 0.82rem;
+        transition: color 0.2s;
+      }
+      .footer-col ul a:hover {
+        color: var(--gold);
+      }
+      .footer-bottom {
+        padding: 24px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .footer-bottom a {
+        transition: color 0.2s;
+      }
+      .footer-bottom a:hover {
+        color: var(--gold);
+      }
+      .footer-legal {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      /* ─── RESPONSIVE: TABLET ─── */
+      @media (min-width: 640px) {
+        .sobre-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .galeria-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .gal-item:first-child {
+          grid-column: span 2;
+        }
+        .review-card {
+          flex: 0 0 calc(50% - 12px);
+        }
+        .ubicacion-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* ─── RESPONSIVE: DESKTOP ─── */
+      @media (min-width: 1024px) {
+        .nav-desktop {
+          display: flex;
+        }
+        .hamburger {
+          display: none;
+        }
+        .hero-img-container {
+          display: block;
+        }
+        .hero-content {
+          padding-right: 0;
+        }
+        #hero {
+          padding-right: 50%;
+        }
+        .galeria-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .gal-item:first-child {
+          grid-column: span 2;
+          aspect-ratio: 4/3;
+        }
+        .review-card {
+          flex: 0 0 calc(33.333% - 16px);
+        }
+        .ubicacion-grid {
+          grid-template-columns: 400px 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 2fr 1fr 1fr 1fr;
+        }
+      }
+
+      /* ─── ANIMATIONS ─── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .fade-up:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      .fade-up:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      .fade-up:nth-child(4) {
+        transition-delay: 0.3s;
+      }
+      .fade-up:nth-child(5) {
+        transition-delay: 0.4s;
+      }
+      .fade-up:nth-child(6) {
+        transition-delay: 0.5s;
+      }
+
+      /* Cookie banner */
+      #cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9998;
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 16px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        transform: translateY(100%);
+        transition: transform 0.4s ease;
+      }
+      #cookie-banner.show {
+        transform: translateY(0);
+      }
+      #cookie-banner a {
+        color: var(--gold);
+      }
+      #cookie-banner button {
+        background: var(--gold);
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ─── FLOATING WHATSAPP ─── -->
+    <a
+      class="float-wa"
+      href="https://wa.me/34611111111?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20para%20manicura."
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        />
+      </svg>
+    </a>
+
+    <!-- ─── HEADER ─── -->
+    <header id="header" role="banner">
+      <div class="container">
+        <div class="header-inner">
+          <a href="#inicio" class="logo" aria-label="Nails Studio"
+            >Nails <span>Studio</span></a
+          >
+
+          <nav class="nav-desktop" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#resenas">Reseñas</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+
+          <div class="nav-social" aria-label="Redes sociales">
+            <a
+              href="https://instagram.com/nailsstudio"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a
+              href="https://facebook.com/nailsstudio"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/34600000000"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+              </svg>
+            </a>
+            <button
+              class="hamburger"
+              id="hamburger"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ─── MOBILE NAV ─── -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+      <a href="#inicio" class="mobile-link">Inicio</a>
+      <a href="#servicios" class="mobile-link">Servicios</a>
+      <a href="#galeria" class="mobile-link">Galería</a>
+      <a href="#resenas" class="mobile-link">Reseñas</a>
+      <a href="#ubicacion" class="mobile-link">Ubicación</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+      <div class="nav-social-mobile">
+        <a
+          href="https://instagram.com/nailsstudio"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#e6683c"
+            stroke-width="1.8"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="0.8" fill="#e6683c" />
+          </svg>
+        </a>
+        <a
+          href="https://facebook.com/nailsstudio"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+        >
+          <svg viewBox="0 0 24 24" fill="#1877f2">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita."
+          target="_blank"
+          rel="noopener"
+          aria-label="WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" fill="#25d366">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- ─── HERO ─── -->
+    <section id="inicio" aria-label="Sección principal">
+      <div id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-deco" aria-hidden="true"></div>
+        <div class="hero-img-container" aria-hidden="true">
+          <img
+            src="images/hero.webp"
+            alt="Manicura profesional en [Ciudad]"
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-tag">Estudio profesional de manicura</div>
+            <h1>Manicura <em>profesional</em> que resalta tu estilo</h1>
+            <p class="hero-sub">
+              Especialistas en uñas elegantes, duraderas y cuidadas al detalle.
+              Tu belleza merece el mejor cuidado.
+            </p>
+            <div class="hero-cta">
+              <a href="tel:+34600000000" class="btn btn-phone">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 .92h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.77a16 16 0 006.29 6.29l1.13-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                  />
+                </svg>
+                Llamar ahora
+              </a>
+              <a
+                href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20para%20manicura."
+                target="_blank"
+                rel="noopener"
+                class="btn btn-whatsapp"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+                WhatsApp
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>5+</strong><span>Años de<br />experiencia</span>
+              </div>
+              <div class="hero-stat">
+                <strong>2.000+</strong><span>Clientes<br />satisfechas</span>
+              </div>
+              <div class="hero-stat">
+                <strong>5★</strong><span>Valoración<br />media</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+          <span>scroll</span>
+          <div class="hero-scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SOBRE EL ESTUDIO ─── -->
+    <section id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="sobre-grid">
+          <div class="sobre-img-wrap fade-up">
+            <div
+              class="sobre-img-main"
+              role="img"
+              aria-label="Interior del estudio de manicura"
+            >
+              <img
+                src="images/ej1.webp"
+                alt="Interior del estudio"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+              <svg
+                viewBox="0 0 100 120"
+                fill="none"
+                stroke="var(--rose-deep)"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M50 10 C38 10 28 28 28 50 C28 68 36 82 50 86 C64 82 72 68 72 50 C72 28 62 10 50 10Z"
+                />
+                <path d="M50 30 C44 30 40 38 40 46" />
+                <path d="M35 52 Q50 44 65 52" />
+              </svg>
+            </div>
+            <div class="sobre-badge">
+              <strong>8+</strong>
+              <span>años de<br />experiencia</span>
+            </div>
+          </div>
+          <div class="fade-up">
+            <span class="section-label">Sobre nosotras</span>
+            <h2 id="sobre-title" class="section-title">
+              Pasión por cada <em>detalle</em>
+            </h2>
+            <div class="divider"></div>
+            <p class="section-text">
+              Somos un estudio especializado en el cuidado y la belleza de tus
+              uñas, ubicado en el corazón de [Ciudad]. Desde 2016, hemos
+              acompañado a miles de clientas en su camino hacia una imagen
+              impecable y cuidada.
+            </p>
+            <p class="section-text" style="margin-top: 14px">
+              Nuestro compromiso es claro: productos de máxima calidad, técnicas
+              actualizadas y una atención personalizada que convierte cada
+              visita en una experiencia única.
+            </p>
+            <div class="sobre-features">
+              <div class="sobre-feat">
+                <h4>✦ Higiene total</h4>
+                <p>
+                  Material esterilizado y protocolos sanitarios rigurosos en
+                  cada servicio.
+                </p>
+              </div>
+              <div class="sobre-feat">
+                <h4>✦ Técnicas actuales</h4>
+                <p>
+                  Formación continua en las últimas tendencias y métodos
+                  profesionales.
+                </p>
+              </div>
+              <div class="sobre-feat">
+                <h4>✦ Productos premium</h4>
+                <p>
+                  Trabajamos solo con marcas reconocidas y de máxima calidad.
+                </p>
+              </div>
+              <div class="sobre-feat">
+                <h4>✦ Atención única</h4>
+                <p>
+                  Cada clienta recibe un servicio personalizado y exclusivo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SERVICIOS ─── -->
+    <section id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="servicios-header fade-up">
+          <span class="section-label">Nuestros servicios</span>
+          <h2 id="servicios-title" class="section-title">
+            Todo lo que tus uñas <em>merecen</em>
+          </h2>
+          <p class="section-text">
+            Ofrecemos una gama completa de tratamientos para que salgas del
+            estudio con unas uñas perfectas, duraderas y llenas de personalidad.
+          </p>
+        </div>
+        <div class="servicios-grid">
+          <article
+            class="service-card fade-up"
+            itemscope
+            itemtype="https://schema.org/Service"
+          >
+            <div class="service-card-img">
+              <div class="service-card-img-inner sc-clasica">
+                <img
+                  src="images/cl.webp"
+                  alt="Manicura clásica"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+              <span class="service-card-badge">Popular</span>
+            </div>
+            <div class="service-card-body">
+              <h3 itemprop="name">Manicura Clásica</h3>
+              <p itemprop="description">
+                Cuidado completo de la uña natural: limado, cutículas y
+                esmaltado con colores de temporada para un resultado perfecto y
+                natural.
+              </p>
+              <div class="service-price">
+                <div class="price-tag">18€ <span>/ sesión</span></div>
+                <a
+                  href="https://wa.me/34600000000?text=Hola%2C%20quiero%20info%20sobre%20Manicura%20Cl%C3%A1sica"
+                  class="service-link"
+                >
+                  Reservar
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="service-card fade-up"
+            itemscope
+            itemtype="https://schema.org/Service"
+          >
+            <div class="service-card-img">
+              <div class="service-card-img-inner sc-semi">
+                <img
+                  src="images/c2.webp"
+                  alt="Manicura clásica"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+              <span class="service-card-badge">Top ventas</span>
+            </div>
+            <div class="service-card-body">
+              <h3 itemprop="name">Manicura Semipermanente</h3>
+              <p itemprop="description">
+                Esmalte semipermanente de larga duración que aguanta hasta 3
+                semanas sin astillarse, con acabado brillante o mate impecable.
+              </p>
+              <div class="service-price">
+                <div class="price-tag">28€ <span>/ sesión</span></div>
+                <a
+                  href="https://wa.me/34600000000?text=Hola%2C%20quiero%20info%20sobre%20Manicura%20Semipermanente"
+                  class="service-link"
+                >
+                  Reservar
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="service-card fade-up"
+            itemscope
+            itemtype="https://schema.org/Service"
+          >
+            <div class="service-card-img">
+              <div class="service-card-img-inner sc-acrilicas">
+                <img
+                  src="images/c3.webp"
+                  alt="Manicura clásica"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 itemprop="name">Uñas Acrílicas</h3>
+              <p itemprop="description">
+                Extensiones de acrílico con estructura resistente y aspecto
+                natural. Perfectas para quienes desean longitud y durabilidad
+                máxima.
+              </p>
+              <div class="service-price">
+                <div class="price-tag">45€ <span>/ sesión</span></div>
+                <a
+                  href="https://wa.me/34600000000?text=Hola%2C%20quiero%20info%20sobre%20U%C3%B1as%20Acr%C3%ADlicas"
+                  class="service-link"
+                >
+                  Reservar
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="service-card fade-up"
+            itemscope
+            itemtype="https://schema.org/Service"
+          >
+            <div class="service-card-img">
+              <div class="service-card-img-inner sc-gel">
+                <img
+                  src="images/c4.webp"
+                  alt="Manicura clásica"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 itemprop="name">Uñas de Gel</h3>
+              <p itemprop="description">
+                Extensiones o refuerzo en gel para un acabado ultraluminoso y
+                natural. Ligeras, flexibles y con durabilidad superior a 4
+                semanas.
+              </p>
+              <div class="service-price">
+                <div class="price-tag">40€ <span>/ sesión</span></div>
+                <a
+                  href="https://wa.me/34600000000?text=Hola%2C%20quiero%20info%20sobre%20U%C3%B1as%20de%20Gel"
+                  class="service-link"
+                >
+                  Reservar
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="service-card fade-up"
+            itemscope
+            itemtype="https://schema.org/Service"
+          >
+            <div class="service-card-img">
+              <div class="service-card-img-inner sc-nailart">
+                <img
+                  src="images/c5.webp"
+                  alt="Manicura clásica"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+              <span class="service-card-badge">Arte</span>
+            </div>
+            <div class="service-card-body">
+              <h3 itemprop="name">Nail Art Personalizado</h3>
+              <p itemprop="description">
+                Diseños exclusivos a mano alzada: flores, geometría, degradados,
+                foil, pedrería y mucho más. Tu visión, hecha uña.
+              </p>
+              <div class="service-price">
+                <div class="price-tag">desde 5€ <span>/ uña</span></div>
+                <a
+                  href="https://wa.me/34600000000?text=Hola%2C%20quiero%20info%20sobre%20Nail%20Art"
+                  class="service-link"
+                >
+                  Reservar
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="service-card fade-up"
+            itemscope
+            itemtype="https://schema.org/Service"
+          >
+            <div class="service-card-img">
+              <div class="service-card-img-inner sc-reparacion">
+                <img
+                  src="images/c6.webp"
+                  alt="Manicura clásica"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3 itemprop="name">Reparación de Uñas</h3>
+              <p itemprop="description">
+                Reparamos uñas rotas o dañadas con técnicas de reconstrucción
+                para devolver su forma y resistencia natural sin sacrificar
+                estética.
+              </p>
+              <div class="service-price">
+                <div class="price-tag">8€ <span>/ uña</span></div>
+                <a
+                  href="https://wa.me/34600000000?text=Hola%2C%20quiero%20info%20sobre%20Reparaci%C3%B3n"
+                  class="service-link"
+                >
+                  Reservar
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── GALERÍA ─── -->
+    <section id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="galeria-header">
+          <div>
+            <span class="section-label">Galería de trabajos</span>
+            <h2 id="galeria-title" class="section-title">
+              Nuestros <em>resultados</em>
+            </h2>
+          </div>
+          <a
+            href="https://instagram.com/nailsstudio"
+            target="_blank"
+            class="btn btn-outline"
+            >Ver en Instagram</a
+          >
+        </div>
+        <div class="galeria-grid" id="galeriaGrid">
+          <div
+            class="gal-item fade-up"
+            data-color="#e8d0c8"
+            data-label="Manicura French"
+          >
+            <div class="gal-inner g1">
+              <img
+                src="images/c5.webp"
+                alt="Manicura francesa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="gal-overlay">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="gal-item fade-up"
+            data-color="#d8b8c8"
+            data-label="Nail Art Flores"
+          >
+            <div class="gal-inner g2">
+              <img
+                src="images/c3.webp"
+                alt="Manicura francesa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="gal-overlay">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="gal-item fade-up"
+            data-color="#d8c8b8"
+            data-label="Gel Natural"
+          >
+            <div class="gal-inner g3">
+              <img
+                src="images/c5.webp"
+                alt="Manicura francesa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="gal-overlay">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="gal-item fade-up"
+            data-color="#e0b8d8"
+            data-label="Degradado Rosa"
+          >
+            <div class="gal-inner g4">
+              <img
+                src="images/c6.webp"
+                alt="Manicura francesa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="gal-overlay">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="gal-item fade-up"
+            data-color="#c8d8b8"
+            data-label="Semipermanente Verde"
+          >
+            <div class="gal-inner g5">
+              <img
+                src="images/c3.webp"
+                alt="Manicura francesa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="gal-overlay">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="gal-item fade-up"
+            data-color="#c0c8d8"
+            data-label="Acrílicas Largas"
+          >
+            <div class="gal-inner g6">
+              <img
+                src="images/c3.webp"
+                alt="Manicura francesa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="gal-overlay">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="gal-item fade-up"
+            data-color="#e8d8b0"
+            data-label="Nail Art Geométrico"
+          >
+            <div class="gal-inner g7">
+              <img
+                src="images/c3.webp"
+                alt="Manicura francesa"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="gal-overlay">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── LIGHTBOX ─── -->
+    <div
+      id="lightbox"
+      role="dialog"
+      aria-label="Vista ampliada"
+      aria-modal="true"
+    >
+      <span
+        class="lb-close"
+        id="lbClose"
+        tabindex="0"
+        role="button"
+        aria-label="Cerrar"
+        >&times;</span
+      >
+      <div class="lb-color-preview" id="lbPreview"></div>
+    </div>
+
+    <!-- ─── RESEÑAS ─── -->
+    <section id="resenas" aria-labelledby="resenas-title">
+      <div class="container">
+        <div class="resenas-header fade-up">
+          <span class="section-label">Testimonios</span>
+          <h2 id="resenas-title" class="section-title">
+            Lo que dicen nuestras <em>clientas</em>
+          </h2>
+          <div class="stars-avg">
+            <span class="stars">★★★★★</span>
+            <span class="num">5.0</span>
+            <span style="font-size: 0.8rem; color: var(--text-light)"
+              >— +200 reseñas verificadas</span
+            >
+          </div>
+        </div>
+        <div class="carousel-track-wrap">
+          <div class="carousel-track" id="carouselTrack">
+            <div
+              class="review-card"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" itemprop="reviewBody">
+                "Trabajo impecable, mis uñas duran semanas perfectas. El trato
+                es exquisito y el estudio está siempre limpio y acogedor. Sin
+                duda el mejor estudio de manicura de la ciudad."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar">L</div>
+                <div>
+                  <div class="review-name" itemprop="author">Laura M.</div>
+                  <div class="review-meta">Cliente desde 2021 · Google</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="review-card"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" itemprop="reviewBody">
+                "Llevo 3 años viniendo y nunca me han fallado. Las uñas de gel
+                me duran más de un mes sin problemas. El nail art que hacen es
+                una maravilla de precisión y creatividad."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar">S</div>
+                <div>
+                  <div class="review-name" itemprop="author">Sara G.</div>
+                  <div class="review-meta">Cliente desde 2020 · Google</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="review-card"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" itemprop="reviewBody">
+                "Pedí un diseño personalizado para mi boda y superaron todas mis
+                expectativas. Mis invitadas no dejaban de preguntarme dónde me
+                las había hecho. ¡Perfectas!"
+              </p>
+              <div class="review-author">
+                <div class="review-avatar">A</div>
+                <div>
+                  <div class="review-name" itemprop="author">Ana R.</div>
+                  <div class="review-meta">Clienta especial · Instagram</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="review-card"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" itemprop="reviewBody">
+                "Siempre muy profesionales. La higiene es impecable, los
+                productos son de máxima calidad y el resultado habla por sí
+                solo. Reservar por WhatsApp es rapidísimo."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar">M</div>
+                <div>
+                  <div class="review-name" itemprop="author">María T.</div>
+                  <div class="review-meta">Cliente desde 2022 · Google</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="review-card"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" itemprop="reviewBody">
+                "El ambiente es precioso, te tratan de maravilla y el resultado
+                es increíble. Las semipermanentes me duran tres semanas
+                perfectas. 100% recomendado."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar">C</div>
+                <div>
+                  <div class="review-name" itemprop="author">Carmen V.</div>
+                  <div class="review-meta">Cliente desde 2023 · Google</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" id="carouselDots" role="tablist"></div>
+      </div>
+    </section>
+
+    <!-- ─── CTA RESERVA ─── -->
+    <section id="reserva" aria-labelledby="reserva-title">
+      <div class="container" style="position: relative; z-index: 2">
+        <span class="section-label">Reserva tu cita</span>
+        <h2 id="reserva-title" class="section-title">
+          Reserva tu cita <em>fácilmente</em>
+        </h2>
+        <p class="section-text">
+          Sin esperas, sin complicaciones. Contáctanos ahora y te atendemos al
+          momento para encontrar el hueco perfecto para ti.
+        </p>
+        <div class="reserva-btns">
+          <a
+            href="tel:+34600000000"
+            class="btn btn-phone"
+            style="padding: 18px 36px"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 .92h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.77a16 16 0 006.29 6.29l1.13-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+              />
+            </svg>
+            Llamar ahora · 600 000 000
+          </a>
+          <a
+            href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20para%20manicura."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-whatsapp"
+            style="padding: 18px 36px"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              />
+            </svg>
+            Reservar por WhatsApp
+          </a>
+        </div>
+        <p class="reserva-note">
+          Respondemos en menos de 30 minutos · Lunes a Sábado 9:00–20:00
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── UBICACIÓN ─── -->
+    <section id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="container">
+        <div class="ubicacion-grid">
+          <div class="fade-up">
+            <span class="section-label">Dónde encontrarnos</span>
+            <h2 id="ubicacion-title" class="section-title">
+              Ven a <em>visitarnos</em>
+            </h2>
+            <div class="divider"></div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <h4>Dirección</h4>
+                <p>
+                  Calle Principal, 24 · 2º piso<br />[Ciudad], [Código Postal]
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div>
+                <h4>Horario de apertura</h4>
+                <ul>
+                  <li>Lunes – Viernes: 9:00 – 20:00</li>
+                  <li>Sábado: 9:00 – 15:00</li>
+                  <li>Domingo: Cerrado</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012 .92h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.77a16 16 0 006.29 6.29l1.13-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4>Teléfono</h4>
+                <p>
+                  <a href="tel:+34600000000" style="color: var(--gold)"
+                    >600 000 000</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>
+                  <a
+                    href="mailto:hola@nailsstudio.es"
+                    style="color: var(--gold)"
+                    >hola@nailsstudio.es</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-up">
+            <div class="map-container">
+              <!-- Reemplaza src con tu URL de Google Maps embed real -->
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+              <div class="map-placeholder">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <p>
+                  <iframe
+                    src="https://www.google.com/maps?q=40.43747089778715,-3.7172049040538244&z=15&output=embed"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación en Google Maps"
+                  >
+                  </iframe>
+                </p>
+                <a href="https://maps.google.com" target="_blank"
+                  >Ver en Google Maps →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── REDES SOCIALES ─── -->
+    <section id="redes" aria-labelledby="redes-title">
+      <div class="container">
+        <span class="section-label">Síguenos</span>
+        <h2 id="redes-title" class="section-title">Nuestras <em>redes</em></h2>
+        <p
+          class="section-text"
+          style="margin: 0 auto 0; text-align: center; max-width: 420px"
+        >
+          Síguenos en redes sociales para ver los últimos diseños, tendencias y
+          novedades del estudio.
+        </p>
+        <div class="redes-icons">
+          <a
+            href="https://instagram.com/nailsstudio"
+            target="_blank"
+            rel="noopener"
+            class="red-icon red-instagram"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" fill="white">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://facebook.com/nailsstudio"
+            target="_blank"
+            rel="noopener"
+            class="red-icon red-facebook"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" fill="white">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://wa.me/34600000000"
+            target="_blank"
+            rel="noopener"
+            class="red-icon red-wa"
+            aria-label="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" fill="white">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="redes-feed-note">
+          Síguenos en Instagram <strong>@nailsstudio</strong> para ver los
+          últimos diseños y novedades del estudio.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer id="contacto" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">Nails <span>Studio</span></div>
+            <p>
+              Estudio profesional de manicura en [Ciudad]. Uñas elegantes,
+              duraderas y cuidadas al detalle desde 2016.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://instagram.com/nailsstudio"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <svg viewBox="0 0 24 24" fill="white" width="16" height="16">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://facebook.com/nailsstudio"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" fill="white" width="16" height="16">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/34600000000"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" fill="white" width="16" height="16">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#galeria">Galería</a></li>
+              <li><a href="#resenas">Reseñas</a></li>
+              <li><a href="#ubicacion">Ubicación</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="#servicios">Manicura Clásica</a></li>
+              <li><a href="#servicios">Semipermanente</a></li>
+              <li><a href="#servicios">Uñas Acrílicas</a></li>
+              <li><a href="#servicios">Uñas de Gel</a></li>
+              <li><a href="#servicios">Nail Art</a></li>
+              <li><a href="#servicios">Reparación</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+              <li
+                style="
+                  color: rgba(255, 255, 255, 0.55);
+                  font-size: 0.82rem;
+                  margin-bottom: 8px;
+                "
+              >
+                Calle Principal, 24<br />[Ciudad], [CP]
+              </li>
+              <li><a href="tel:+34600000000">600 000 000</a></li>
+              <li>
+                <a href="mailto:hola@nailsstudio.es">hola@nailsstudio.es</a>
+              </li>
+              <li
+                style="
+                  color: rgba(255, 255, 255, 0.55);
+                  font-size: 0.82rem;
+                  margin-top: 8px;
+                "
+              >
+                Lun–Vie: 9:00–20:00<br />Sáb: 9:00–15:00
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2025 Nails Studio. Todos los derechos reservados.</span>
+          <div class="footer-legal">
+            <a href="#aviso-legal">Aviso Legal</a>
+            <a href="#privacidad">Política de Privacidad</a>
+            <a href="#cookies">Política de Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ─── COOKIE BANNER ─── -->
+    <div id="cookie-banner" role="dialog" aria-label="Aviso de cookies">
+      <p>
+        Utilizamos cookies propias y de terceros para mejorar tu experiencia.
+        <a href="#cookies">Más información</a>.
+      </p>
+      <button id="acceptCookies">Aceptar todas</button>
+    </div>
+
+    <!-- ─── JAVASCRIPT ─── -->
+    <script>
+      // Header scroll
+      const header = document.getElementById("header");
+      window.addEventListener(
+        "scroll",
+        () => {
+          header.classList.toggle("scrolled", window.scrollY > 40);
+        },
+        { passive: true },
+      );
+
+      // Hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const mobileNav = document.getElementById("mobileNav");
+      hamburger.addEventListener("click", () => {
+        const open = hamburger.classList.toggle("open");
+        mobileNav.classList.toggle("open", open);
+        hamburger.setAttribute("aria-expanded", open);
+        document.body.style.overflow = open ? "hidden" : "";
+      });
+
+      // Close mobile nav on link click
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("open");
+          mobileNav.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        });
+      });
+
+      // Lightbox
+      const lightbox = document.getElementById("lightbox");
+      const lbPreview = document.getElementById("lbPreview");
+      const lbClose = document.getElementById("lbClose");
+
+      document.querySelectorAll(".gal-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const color = item.dataset.color || "#e8d0c8";
+          const label = item.dataset.label || "Diseño de manicura";
+          lbPreview.style.background = color;
+          lbPreview.innerHTML = `
+        <div style="text-align:center;color:rgba(255,255,255,0.7);">
+          <svg width="80" height="80" viewBox="0 0 60 60" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
+            <circle cx="30" cy="25" r="14"/>
+            <path d="M20 42 Q30 48 40 42"/>
+          </svg>
+          <p style="margin-top:16px;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;">${label}</p>
+          <p style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;margin-top:6px;opacity:0.5;">Nails Studio</p>
+        </div>`;
+          lightbox.classList.add("active");
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+      lbClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+      lbClose.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") closeLightbox();
+      });
+
+      // Carousel
+      const track = document.getElementById("carouselTrack");
+      const dotsContainer = document.getElementById("carouselDots");
+      const cards = track.querySelectorAll(".review-card");
+      let currentSlide = 0;
+      let autoPlayInterval;
+
+      function getVisibleCards() {
+        const w = window.innerWidth;
+        if (w >= 1024) return 3;
+        if (w >= 640) return 2;
+        return 1;
+      }
+
+      function getTotalSlides() {
+        return Math.ceil(cards.length / getVisibleCards());
+      }
+
+      function buildDots() {
+        dotsContainer.innerHTML = "";
+        const total = getTotalSlides();
+        for (let i = 0; i < total; i++) {
+          const dot = document.createElement("button");
+          dot.className =
+            "carousel-dot" + (i === currentSlide ? " active" : "");
+          dot.setAttribute("role", "tab");
+          dot.setAttribute("aria-label", `Reseña ${i + 1}`);
+          dot.addEventListener("click", () => goToSlide(i));
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function goToSlide(index) {
+        const total = getTotalSlides();
+        currentSlide = (index + total) % total;
+        const visible = getVisibleCards();
+        const cardWidth = cards[0].offsetWidth + 24;
+        track.style.transform = `translateX(-${currentSlide * visible * cardWidth}px)`;
+        document.querySelectorAll(".carousel-dot").forEach((d, i) => {
+          d.classList.toggle("active", i === currentSlide);
+        });
+      }
+
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(() => {
+          goToSlide(currentSlide + 1);
+        }, 4500);
+      }
+
+      buildDots();
+      startAutoPlay();
+      window.addEventListener("resize", () => {
+        buildDots();
+        goToSlide(0);
+      });
+
+      // Touch swipe for carousel
+      let startX = 0;
+      track.addEventListener(
+        "touchstart",
+        (e) => {
+          startX = e.touches[0].clientX;
+        },
+        { passive: true },
+      );
+      track.addEventListener("touchend", (e) => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          clearInterval(autoPlayInterval);
+          goToSlide(currentSlide + (diff > 0 ? 1 : -1));
+          startAutoPlay();
+        }
+      });
+
+      // Intersection Observer for fade-up
+      const fadeEls = document.querySelectorAll(".fade-up");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      fadeEls.forEach((el) => observer.observe(el));
+
+      // Cookie banner
+      const cookieBanner = document.getElementById("cookie-banner");
+      if (!localStorage.getItem("cookies_accepted")) {
+        setTimeout(() => cookieBanner.classList.add("show"), 2000);
+      }
+      document.getElementById("acceptCookies").addEventListener("click", () => {
+        localStorage.setItem("cookies_accepted", "true");
+        cookieBanner.classList.remove("show");
+      });
+
+      // Smooth active nav highlighting
+      const sections = document.querySelectorAll(
+        'section[id], div[id="inicio"]',
+      );
+      const navLinks = document.querySelectorAll(".nav-desktop a");
+      const sectionMap = {
+        inicio: "#inicio",
+        servicios: "#servicios",
+        galeria: "#galeria",
+        resenas: "#resenas",
+        ubicacion: "#ubicacion",
+        contacto: "#contacto",
+      };
+      window.addEventListener(
+        "scroll",
+        () => {
+          let current = "";
+          document.querySelectorAll("section[id]").forEach((sec) => {
+            if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+          });
+          navLinks.forEach((link) => {
+            link.style.color =
+              link.getAttribute("href") === "#" + current ? "var(--dark)" : "";
+          });
+        },
+        { passive: true },
+      );
+    </script>
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Nails Studio",
+        "description": "Estudio profesional de manicura en [Ciudad]. Especialistas en uñas de gel, acrílicas, semipermanente y nail art.",
+        "url": "https://www.nailsstudio.es",
+        "telephone": "+34600000000",
+        "email": "hola@nailsstudio.es",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Principal, 24",
+          "addressLocality": "[Ciudad]",
+          "postalCode": "[CP]",
+          "addressCountry": "ES"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "15:00"
+          }
+        ],
+        "sameAs": [
+          "https://instagram.com/nailsstudio",
+          "https://facebook.com/nailsstudio"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "200"
+        }
+      }
+    </script>
+  </body>
+</html>
